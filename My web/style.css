@@ -16,11 +16,13 @@
 .main {
   background: url(./img/101_taipei.jpg) no-repeat center center / cover;
   height: 100vh;
+  width: 100%;
+  background-size: cover;
 }
 
 .navbar {
   text-transform: uppercase;
-  background: var(--navbarColor);
+  /*background: var(--navbarColor);*/
   background: transparent;
   font-family: var(--navbarFont);
   height: 80px;
@@ -74,13 +76,14 @@
 }
 
 .navbar_links {
-  color: #fff;
+  color: #eddcd2;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  transition: all 0.5s ease;
 }
 
 .navbar__btn {
@@ -119,6 +122,7 @@
 .txt-type > .txt {
   border-right: 0.2rem solid #777;
   font-weight: bold;
+  color: #e5989b;
 }
 
 @media screen and (max-width: 960px) {
@@ -148,7 +152,8 @@
 
   .navbar__menu.active {
     /*for javascript to trigger*/
-    background: #eddcd2;
+    /*background: #eddcd2;*/
+    background: #fff;
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -266,4 +271,50 @@
   .header1 {
     font-size: 2.5rem;
   }
+}
+
+.test {
+  width: 100%;
+  height: 50px;
+  z-index: 50;
+}
+
+.intro {
+  height: 100vh;
+  text-align: left;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border-top: solid 10px #4a4e69;
+  background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
+}
+
+.my-selfie {
+  height: 800px;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.content {
+  padding: 9em 5em;
+  z-index: 1;
+  position: relative;
+}
+
+.content > h2 {
+  font-size: 5em;
+}
+
+.content > p {
+  font-size: 1.6em;
+}
+
+footer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
